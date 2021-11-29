@@ -1,5 +1,5 @@
 """Subtraction Class"""
-from calc.operations.calculations import Calculation
+from calc.operations.calculation import Calculation
 
 class Subtraction(Calculation):
     """subtraction class"""
@@ -12,3 +12,4 @@ class Subtraction(Calculation):
         for value in list_of_values[1:]:
             difference_of_values =   difference_of_values - float(value)
         return difference_of_values
+

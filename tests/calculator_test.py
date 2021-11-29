@@ -14,6 +14,7 @@ def clear_history_fixture():
 def test_calculator_add(clear_history_fixture):
     """testing for addition method for calc"""
     assert Calculator.add_numbers(1.0, 2.0) == 3.0
+    assert Calculator.add_numbers(1.0, 2.0, 3.0) == 6.0
 
 def test_calculator_subtract(clear_history_fixture):
     """Testing the subtract method of the calc"""
@@ -25,64 +26,64 @@ def test_calculator_multiply(clear_history_fixture):
 
 def test_calculator_division(clear_history_fixture):
     """Testing the division method of the calc"""
-    assert Calculator.divide_numbers(4, 2) == 2.0
-    assert Calculator.divide_numbers(4, 0) == "No Zero in the Denominator"
+    assert Calculator.divide_numbers(4.0, 2.0) == 2.0
+    assert Calculator.divide_numbers(0.0, 4.0) == 0.0
+    assert Calculator.divide_numbers(4.0, 0.0) == "No Zero allowed in the Denominator!"
 
 def test_clear_history(clear_history_fixture):
     """Testing clear history """
 
-    Calculator.add_numbers(1.0,2.0)
+    Calculator.add_numbers(1.0,1.0)
     Calculator.clear_history()
+    assert Calculator.clear_history() == "No history"
     assert Calculator.history == []
 
-def test_remove_1st_calculation_history(clear_history_fixture):
+def test_remove_1st_calculation_in_history(clear_history_fixture):
     """Testing to remove first 1st calculation and make it an object"""
 
     Calculator.add_numbers(*(1, 2))
     Calculator.multiply_numbers(3, 3)
     first = Calculator.history[:]
     first.pop(0)
-    print(first)
     Calculator.remove_history(0)
-    print(Calculator.history)
     assert Calculator.history == first
 
-def test_remove_2nd_calculations_history(clear_history_fixture):
+def test_remove_2nd_calculations_in_history(clear_history_fixture):
     """Testing to remove first 2nd calculation and make it an object"""
 
     Calculator.add_numbers(*(1, 5))
     Calculator.multiply_numbers(3, 4)
     second = Calculator.history[:]
     second.pop(1)
-    print(second)
     Calculator.remove_history(1)
-    print(Calculator.history)
     assert Calculator.history == second
 
 def test_length_of_history(clear_history_fixture):
     """Testing the length of the history"""
 
     Calculator.add_numbers(*(2, 2))
-    Calculator.add_numbers(3, 3)
     Calculator.multiply_numbers(2, 4)
-    Calculator.multiply_numbers(4, 3)
-    assert Calculator.length_history() == 4
+    assert Calculator.length_history() == 2
 
 def test_get_calculation(clear_history_fixture):
     """Testing getting a specific calculation out of the history"""
 
     Calculator.multiply_numbers(1.0,2.0)
-    Calculator.add_numbers(3, 3, 3)
     Calculator.subtract_numbers(3, 3, 3)
     assert Calculator.get_calculation(0).get_result() == 2.0
-    assert Calculator.get_calculation(1).get_result() == 9.0
-    assert Calculator.get_calculation(2).get_result() == -3.0
+    assert Calculator.get_calculation(1).get_result() == -3.0
 
 def test_get_calculation_last(clear_history_fixture):
     """Testing getting the last calculation from the history"""
 
     Calculator.add_numbers(2, 4, 8)
-    Calculator.add_numbers(3, 3, 3)
-    assert Calculator.get_calculation_last() == 9
-    Calculator.clear_history()
-    assert Calculator.get_calculation_last() == "Zero History Currently"
+    Calculator.add_numbers(4, 4, 4)
+    assert Calculator.get_calculation_last() == 12.0
+
+def test_length():
+
+    list = ['a', 'b', 'c', 'd', 'e']
+
+    result = len(list)
+
+    assert result == 5

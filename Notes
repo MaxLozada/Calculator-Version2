@@ -1,0 +1,11 @@
+test with csv files and when you test with them has to be to do all operations
+when zero will log and write file that contains the error
+record time record number and that it was a divide by zero number
+have folder that is called calculations records
+be able to read it an in other folder out put the results
+
+POWERPOINT NOTES
+read csv file for calculator
+read csv for input into the actual program by watching a folder or scanning a folder to detect files for input
+write log file operations that say result, unix time stamp and record number, and operation type. there should be one file with the operations
+write log file for exceptions as divide by zero

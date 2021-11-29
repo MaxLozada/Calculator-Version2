@@ -1,5 +1,5 @@
 """ division class"""
-from calc.operations.calculations import Calculation
+from calc.operations.calculation import Calculation
 
 class Division(Calculation): # pylint: disable=too-few-public-methods
     """ division class"""
@@ -13,6 +13,6 @@ class Division(Calculation): # pylint: disable=too-few-public-methods
                 quotient_of_value = quotient_of_value / float(value)
             except ZeroDivisionError as e:
                 print(e)
-                return "No Zero in the Denominator"
+                return "No Zero allowed in the Denominator!"
             return quotient_of_value
 
