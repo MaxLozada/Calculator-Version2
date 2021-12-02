@@ -1,10 +1,13 @@
-from csv_tester.csvCaller import CsvFileCaller
+"""key and value utilization"""
+from csv_tester.csv_caller import CsvFileCaller
 
 
 class CsvListMaker:
+    """Csv List Maker"""
 
     @staticmethod
     def csv_list_for_addition():
+        """Csv List Maker for operation"""
         csv_list = CsvFileCaller.csv_caller_addition()
         first_value_sum = []
         second_value_sum = []
@@ -17,6 +20,7 @@ class CsvListMaker:
 
     @staticmethod
     def csv_list_for_subtraction():
+        """Csv List Maker for operation"""
         csv_list = CsvFileCaller.csv_caller_subtraction()
         first_value_dif = []
         second_value_dif = []
@@ -29,6 +33,7 @@ class CsvListMaker:
 
     @staticmethod
     def csv_list_for_multiplication():
+        """Csv List Maker for operation"""
         csv_list = CsvFileCaller.csv_caller_multiplication()
         first_value_product = []
         second_value_product = []
@@ -41,6 +46,7 @@ class CsvListMaker:
 
     @staticmethod
     def csv_list_for_division():
+        """Csv List Maker for operation"""
         csv_list = CsvFileCaller.csv_caller_division()
         first_value_quotient = []
         second_value_quotient = []

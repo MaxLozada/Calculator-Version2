@@ -1,7 +1,8 @@
 """ Multiplication class"""
 from calc.operations.calculation import Calculation
 
-class Multiplication(Calculation):
+
+class Multiplication(Calculation):  # pylint: disable=too-few-public-methods
     """multiplication class"""
 
     def get_result(self):

@@ -1,7 +1,9 @@
+""" This is the increment function"""
 from calc.operations.addition import Addition
 from calc.operations.division import Division
 from calc.operations.multiplication import Multiplication
 from calc.operations.subtraction import Subtraction
+
 
 class Calculator:
     """ This is the Calculator class"""
@@ -49,7 +51,7 @@ class Calculator:
     def clear_history():
         """ Clear the calculation history"""
         Calculator.history.clear()
-        return "No history"
+        return True
 
     @staticmethod
     def length_history():
@@ -72,4 +74,4 @@ class Calculator:
         """ get last calculation from history"""
         if len(Calculator.history) > 0:
             return Calculator.history[-1].get_result()
-        return "No history"
+        return "Zero History Currently"
