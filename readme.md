@@ -1,6 +1,8 @@
 # Calculator Screenshot
 
-Screenshot -> https://github.com/MaxLozada/Calculator_Version2/blob/new_calc/Screenshot%20(126).png
+Updated screenshot with current coverage
+
+Screenshot -> https://github.com/MaxLozada/Calculator_Version2/blob/new_calc/Screenshot%20(127).png
 
 
 
