@@ -1,4 +1,8 @@
-# Calculator
+# Calculator Screenshot
+
+Screenshot -> https://github.com/MaxLozada/Calculator_Version2/blob/new_calc/Screenshot%20(126).png
+
+
 
 Run Pip Install
 pip install -r requirements.txt
@@ -11,5 +15,3 @@ pytest  --pylint --cov
 .coveragerc is the config for coverage
 setup.py is a config file for pytest
 
-
-https://github.com/MaxLozada/Calculator_Version2/blob/new_calc/Screenshot%20(126).png
