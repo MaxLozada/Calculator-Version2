@@ -10,7 +10,7 @@ class CsvFileCaller:
     def csv_caller_addition():
         """ without pandas """
         csv_file = CsvFileReader('C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2'
-                               '\\testing_documents\\Addition1' + '.csv')
+                               '\\input_folder\\Addition1' + '.csv')
         read_content = csv_file.key_value_maker()
         return read_content
 
@@ -19,7 +19,7 @@ class CsvFileCaller:
         """ without pandas """
         csv_file = CsvFileReader(
             'C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\'
-            'testing_documents\\Subtraction.csv')
+            'input_folder\\Subtraction.csv')
         read_content = csv_file.key_value_maker()
         return read_content
 
@@ -28,7 +28,7 @@ class CsvFileCaller:
         """ without pandas """
         csv_file = CsvFileReader(
             'C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\'
-            'testing_documents\\Multiplication.csv')
+            'input_folder\\Multiplication.csv')
         read_content = csv_file.key_value_maker()
         return read_content
 
@@ -37,6 +37,6 @@ class CsvFileCaller:
         """ without pandas """
         csv_file = CsvFileReader(
             'C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\'
-            'testing_documents\\Division.csv')
+            'input_folder\\Division.csv')
         read_content = csv_file.key_value_maker()
         return read_content

@@ -11,7 +11,7 @@ class Division(Calculation):  # pylint: disable=too-few-public-methods
         quotient_of_value = list_of_values[0]
         for value in list_of_values[1:]:
             try:
-                quotient_of_value /= float(value)
+                quotient_of_value = quotient_of_value / float(value)
                 return quotient_of_value
             except ZeroDivisionError as e:
                 print(e)
