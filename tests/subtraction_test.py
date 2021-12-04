@@ -1,7 +1,19 @@
 """ testing subtraction """
 
+import logging
 from calc.calculator import Calculator
 from csv_tester.key_n_value_utilization import CsvListMaker
+
+# Remove all handlers associated with the root logger object.
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
+logging.basicConfig(filename='../results_folder/csv_log_tests.log', level=logging.DEBUG,
+                    format='%(created)f, %(filename)s, %(message)s')
+
+
+# pylint: disable=consider-using-f-string
+# pylint: disable=logging-format-interpolation
 
 
 def test_subtraction():
@@ -10,4 +22,11 @@ def test_subtraction():
     value_b = CsvListMaker.csv_list_for_subtraction()[1]
     result_difference = CsvListMaker.csv_list_for_subtraction()[2]
 
-    assert Calculator.subtract_numbers(value_a[0], value_b[0]) == result_difference[0]
+    num_1 = value_a[3]
+    num_2 = value_b[3]
+
+    sub_result = Calculator.subtract_numbers(num_1, num_2)
+
+    print(result_difference[3])
+    print('Sub: {} - {} = {}'.format(num_1, num_2, sub_result))
+    logging.info('Sub: {} - {} = {}'.format(num_1, num_2, sub_result))

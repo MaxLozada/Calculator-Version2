@@ -9,34 +9,35 @@ class CsvFileCaller:
     @staticmethod
     def csv_caller_addition():
         """ without pandas """
-        csv_file = CsvFileReader('C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2'
-                               '\\input_folder\\Addition1' + '.csv')
+        add_csv = 'Addition1.csv'
+        csv_file = CsvFileReader('C:\\Users\\MAXLO\\PycharmProjects\\'
+                                 'Calculator_Version2\\input_folder\\' + add_csv)
         read_content = csv_file.key_value_maker()
         return read_content
 
     @staticmethod
     def csv_caller_subtraction():
         """ without pandas """
-        csv_file = CsvFileReader(
-            'C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\'
-            'input_folder\\Subtraction.csv')
+        sub_csv = 'Subtraction.csv'
+        csv_file = CsvFileReader('C:\\Users\\MAXLO\\PycharmProjects\\'
+                                 'Calculator_Version2\\input_folder\\' + sub_csv)
         read_content = csv_file.key_value_maker()
         return read_content
 
     @staticmethod
     def csv_caller_multiplication():
         """ without pandas """
-        csv_file = CsvFileReader(
-            'C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\'
-            'input_folder\\Multiplication.csv')
+        mul_csv = 'Multiplication.csv'
+        csv_file = CsvFileReader('C:\\Users\\MAXLO\\PycharmProjects\\'
+                                 'Calculator_Version2\\input_folder\\' + mul_csv)
         read_content = csv_file.key_value_maker()
         return read_content
 
     @staticmethod
     def csv_caller_division():
         """ without pandas """
-        csv_file = CsvFileReader(
-            'C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\'
-            'input_folder\\Division.csv')
+        div_csv = 'Division.csv'
+        csv_file = CsvFileReader('C:\\Users\\MAXLO\\PycharmProjects\\'
+                                 'Calculator_Version2\\input_folder\\' + div_csv)
         read_content = csv_file.key_value_maker()
         return read_content
