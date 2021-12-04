@@ -1,5 +1,6 @@
 """ testing multiplication """
 
+import os
 import logging
 from calc.calculator import Calculator
 from csv_tester.key_n_value_utilization import CsvListMaker
@@ -30,3 +31,16 @@ def test_multiplication():
     print(result_product[4])
     print('Mul: {} * {} = {}'.format(num_1, num_2, mul_result))
     logging.info('Mul: {} * {} = {}'.format(num_1, num_2, mul_result))
+
+    source = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\input_folder\\Multiplication.csv"
+
+    destination = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\done_folder\\Multiplication.csv"
+
+    try:
+        if os.path.exists(destination):
+            print("There is a file there already.")
+        else:
+            os.replace(source, destination)
+            print(source + " was moved.")
+    except FileNotFoundError:
+        print(source + " was not found.")

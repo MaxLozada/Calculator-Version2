@@ -9,7 +9,7 @@ class CsvFileCaller:
     @staticmethod
     def csv_caller_addition():
         """ without pandas """
-        add_csv = 'Addition1.csv'
+        add_csv = 'Addition2.csv'
         csv_file = CsvFileReader('C:\\Users\\MAXLO\\PycharmProjects\\'
                                  'Calculator_Version2\\input_folder\\' + add_csv)
         read_content = csv_file.key_value_maker()

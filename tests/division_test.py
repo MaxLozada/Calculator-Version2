@@ -1,5 +1,6 @@
 """ testing division """
 
+import os
 import logging
 from calc.calculator import Calculator
 from csv_tester.key_n_value_utilization import CsvListMaker
@@ -30,3 +31,16 @@ def test_division():
 
     print('Div: {} / {} = {}'.format(num_1, num_2, div_result))
     logging.info('Div: {} / {} = {}'.format(num_1, num_2, div_result))
+
+    source = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\input_folder\\Division.csv"
+
+    destination = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\done_folder\\Division.csv"
+
+    try:
+        if os.path.exists(destination):
+            print("There is a file there already.")
+        else:
+            os.replace(source, destination)
+            print(source + " was moved.")
+    except FileNotFoundError:
+        print(source + " was not found.")

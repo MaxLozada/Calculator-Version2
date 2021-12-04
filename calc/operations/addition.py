@@ -12,4 +12,3 @@ class Addition(Calculation):  # pylint: disable=too-few-public-methods
         for value in list_of_values[0:]:
             sum_of_values = sum_of_values + float(value)
         return sum_of_values
-
