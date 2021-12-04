@@ -1,0 +1,8 @@
+1638585708.161216, addition_test.py, Add: 1.0 + 3.0 = 4.0
+1638585710.658661, division_test.py, Div: 4.0 / 0.0 = No Zero allowed in the Denominator!
+1638585715.462628, multiplication_test.py, Mul: 1.0 * 3.0 = 3.0
+1638585718.239897, subtraction_test.py, Sub: 1.0 - 3.0 = -2.0
+1638585731.942702, subtraction_test.py, Sub: 4.0 - 6.0 = -2.0
+1638585743.608455, multiplication_test.py, Mul: 5.0 * 7.0 = 35.0
+1638585756.530305, addition_test.py, Add: 4.0 + 6.0 = 10.0
+1638585771.316353, division_test.py, Div: 4.0 / 6.0 = 0.6666666666666666
