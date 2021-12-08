@@ -1,5 +1,4 @@
 """ testing division """
-
 import os
 import logging
 from calc.calculator import Calculator
@@ -9,7 +8,8 @@ from csv_tester.key_n_value_utilization import CsvListMaker
 for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
 
-logging.basicConfig(filename='../results_folder/csv_log_tests.log', level=logging.DEBUG,
+logging.basicConfig(filename='C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2'
+                    '\\results_folder\\csv_log_tests.log', level=logging.DEBUG,
                     format='%(created)f, %(filename)s, %(message)s')
 
 
@@ -23,18 +23,19 @@ def test_division():
     value_b = CsvListMaker.csv_list_for_division()[1]
     result_quotient = CsvListMaker.csv_list_for_division()[2]
 
-    num_1 = value_a[3]
-    num_2 = value_b[3]
+    for record_number in range(len(result_quotient)):
+        num_1 = value_a[record_number]
+        num_2 = value_b[record_number]
 
-    print(result_quotient[3])
-    div_result = Calculator.divide_numbers(num_1, num_2)
+        div_result = Calculator.divide_numbers(num_1, num_2)
 
-    print('Div: {} / {} = {}'.format(num_1, num_2, div_result))
-    logging.info('Div: {} / {} = {}'.format(num_1, num_2, div_result))
+        logging.info('Div: {} / {} = {}'.format(num_1, num_2, div_result))
 
-    source = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\input_folder\\Division.csv"
+    source = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2" \
+             "\\input_folder\\Division.csv"
 
-    destination = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\done_folder\\Division.csv"
+    destination = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2" \
+                  "\\done_folder\\Division.csv"
 
     try:
         if os.path.exists(destination):

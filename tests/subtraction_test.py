@@ -9,7 +9,8 @@ from csv_tester.key_n_value_utilization import CsvListMaker
 for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
 
-logging.basicConfig(filename='../results_folder/csv_log_tests.log', level=logging.DEBUG,
+logging.basicConfig(filename='C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2'
+                    '\\results_folder\\csv_log_tests.log', level=logging.DEBUG,
                     format='%(created)f, %(filename)s, %(message)s')
 
 
@@ -23,18 +24,19 @@ def test_subtraction():
     value_b = CsvListMaker.csv_list_for_subtraction()[1]
     result_difference = CsvListMaker.csv_list_for_subtraction()[2]
 
-    num_1 = value_a[3]
-    num_2 = value_b[3]
+    for record_number in range(len(result_difference)):
+        num_1 = value_a[record_number]
+        num_2 = value_b[record_number]
 
-    sub_result = Calculator.subtract_numbers(num_1, num_2)
+        sub_result = Calculator.subtract_numbers(num_1, num_2)
 
-    print(result_difference[3])
-    print('Sub: {} - {} = {}'.format(num_1, num_2, sub_result))
-    logging.info('Sub: {} - {} = {}'.format(num_1, num_2, sub_result))
+        logging.info('Sub: {} - {} = {}'.format(num_1, num_2, sub_result))
 
-    source = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\input_folder\\Subtraction.csv"
+    source = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2" \
+             "\\input_folder\\Subtraction.csv"
 
-    destination = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\done_folder\\Subtraction.csv"
+    destination = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2" \
+                  "\\done_folder\\Subtraction.csv"
 
     try:
         if os.path.exists(destination):

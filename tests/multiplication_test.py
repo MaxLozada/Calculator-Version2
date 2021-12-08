@@ -9,7 +9,8 @@ from csv_tester.key_n_value_utilization import CsvListMaker
 for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
 
-logging.basicConfig(filename='../results_folder/csv_log_tests.log', level=logging.DEBUG,
+logging.basicConfig(filename='C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2'
+                    '\\results_folder\\csv_log_tests.log', level=logging.DEBUG,
                     format='%(created)f, %(filename)s, %(message)s')
 
 
@@ -23,18 +24,19 @@ def test_multiplication():
     value_b = CsvListMaker.csv_list_for_multiplication()[1]
     result_product = CsvListMaker.csv_list_for_multiplication()[2]
 
-    num_1 = value_a[4]
-    num_2 = value_b[4]
+    for record_number in range(len(result_product)):
+        num_1 = value_a[record_number]
+        num_2 = value_b[record_number]
 
-    mul_result = Calculator.multiply_numbers(num_1, num_2)
+        mul_result = Calculator.multiply_numbers(num_1, num_2)
 
-    print(result_product[4])
-    print('Mul: {} * {} = {}'.format(num_1, num_2, mul_result))
-    logging.info('Mul: {} * {} = {}'.format(num_1, num_2, mul_result))
+        logging.info('Mul: {} * {} = {}'.format(num_1, num_2, mul_result))
 
-    source = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\input_folder\\Multiplication.csv"
+    source = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2" \
+             "\\input_folder\\Multiplication.csv"
 
-    destination = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2\\done_folder\\Multiplication.csv"
+    destination = "C:\\Users\\MAXLO\\PycharmProjects\\Calculator_Version2" \
+                  "\\done_folder\\Multiplication.csv"
 
     try:
         if os.path.exists(destination):
