@@ -2,7 +2,7 @@
 
 Updated screenshot with current coverage as of the last commit made
 
-![Screenshot] (Screenshot%20(129).png)
+![Screenshot](Screenshot(129).png)
 
 
 
