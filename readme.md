@@ -2,7 +2,7 @@
 
 Updated screenshot with current coverage as of the last commit made
 
-Screenshot -> https://github.com/MaxLozada/Calculator_Version2/blob/new_calc/Screenshot%20(129).png
+![Screenshot] (Screenshot%20(129).png)
 
 
 
