@@ -14,14 +14,14 @@ class CalculatorController(ControllerBase):
             value1 = request.form['value1']
             value2 = request.form['value2']
             operation = request.form['operation']
-            # make the tuple
-            my_tuple = (value1, value2)
+
             # this will call the correct operation
-            getattr(Calculator, operation)(my_tuple)
+            Calculator.calculate_numbers(operation, value1, value2)
             result = str(Calculator.get_calculation_last())
-            return render_template('result.html', value1=value1, value2=value2, operation=operation,
+            return render_template('results.html', value1=value1, value2=value2, operation=operation,
                                    result=result)
         return render_template('calculator2.html', error=error)
+
     @staticmethod
     def get():
         return render_template('calculator2.html')

@@ -10,6 +10,12 @@ class Calculator:
     history = []
 
     @staticmethod
+    def calculate_numbers(operation, *args):
+        """ will call respective calculation functions based on operation """
+        function = Calculator.operation_functions[operation]
+        return function(*args)
+
+    @staticmethod
     def add_calculation_to_history(calculation):
         """ Add calculation to history """
         Calculator.history.append(calculation)
@@ -75,3 +81,11 @@ class Calculator:
         if len(Calculator.history) > 0:
             return Calculator.history[-1].get_result()
         return "Zero History Currently"
+
+
+Calculator.operation_functions = {
+    "addition": Calculator.add_numbers,
+    "subtraction": Calculator.subtract_numbers,
+    "multiplication": Calculator.multiply_numbers,
+    "division": Calculator.divide_numbers,
+}
