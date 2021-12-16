@@ -2,7 +2,7 @@
 
 Updated screenshot with current coverage
 [Surface Gradient]
-![](upload-markdown.md)
+[![Watch the video](upload-markdown.md)
 
 Validation stuff for project
 
