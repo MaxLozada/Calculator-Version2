@@ -1,6 +1,8 @@
 # Calculator Screenshot
 
 Updated screenshot with current coverage
+[Surface Gradient]
+![](docs/docfx/images/NormalBlend.gif)
 
 Validation stuff for project
 
