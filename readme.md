@@ -2,7 +2,7 @@
 
 Updated screenshot with current coverage
 [Surface Gradient]
-![](docs/docfx/images/NormalBlend.gif)
+![](upload-markdown.md)
 
 Validation stuff for project
 
