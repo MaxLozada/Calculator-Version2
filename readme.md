@@ -2,6 +2,8 @@
 
 Updated screenshot with current coverage
 
+Validation stuff for project
+
 ![Screenshot](Screenshot%20(134).png)
 
 ![Screenshot](Screenshot%20(136).png)
