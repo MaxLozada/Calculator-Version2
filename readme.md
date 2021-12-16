@@ -1,4 +1,4 @@
-# Calculator Screenshot
+# Calculator HW/ Project 3
 
 **Video for My Project 3 demonstrasting it (no matter how much I tried I could not make the video 30 seconds to show everything and explain so instead it is a minute)**
 
