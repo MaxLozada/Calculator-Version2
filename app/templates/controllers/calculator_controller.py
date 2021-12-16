@@ -1,6 +1,6 @@
-from app.controllers.controller import ControllerBase
+from app.templates.controllers.controller import ControllerBase
 from calc.calculator import Calculator
-from flask import render_template, request, flash, redirect, url_for
+from flask import render_template, request, flash
 
 
 class CalculatorController(ControllerBase):

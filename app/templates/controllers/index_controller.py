@@ -1,4 +1,4 @@
-from app.controllers.controller import ControllerBase
+from app.templates.controllers.controller import ControllerBase
 from flask import render_template, request, flash
 from calc.calculator import Calculator
 
