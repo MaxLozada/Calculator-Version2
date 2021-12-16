@@ -1,8 +1,8 @@
 # Calculator Screenshot
 
-Updated screenshot with current coverage
-[Surface Gradient]
-[![Watch the video](upload-markdown.md)
+Video for My Project 3 demonstrasting it 
+
+https://user-images.githubusercontent.com/56085654/146288182-2be631f1-8214-41bf-87a9-d28da9397b90.mp4
 
 Validation stuff for project
 
